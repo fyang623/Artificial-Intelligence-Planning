@@ -58,6 +58,9 @@ Figure 4. The total number of nodes GBFS generated as function of problem size
 Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time, while h_walldist and h_esdist are much faster. Figure 4 shows that h_ff1 and h_ff2 lead GBFS to generate about the same number of nodes, fewer than h_esdist but more than h_walldist.
 
 ## Part 2:
+In this part two stochastic shortest-path (SSP) algorithms were implemented to deal with the nondeterminism of the steering result. For the comparison to be interesting, I selected `LAO*` and `UCT` (see algorithms 2 & 3). `LAO*` is a combination of best-first search and dynamic programming; it generalizes `A*` and handles cyclic search spaces. Meanwhile, `UCT` is an example of online probabilistic planning technique; it is Monte Carlo Tree Search with a sampling strategy that allows to further explore promising actions and prune out rapidly inferior options.
+
+Both `LAO*` and `UCT` can use each of the 4 heuristics described in part 1, giving 8 possible combinations. To compare the performance of the two algorithms, I used `h_walldist` in all of the experiments.
 
 
 
