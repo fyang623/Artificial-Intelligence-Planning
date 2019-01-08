@@ -85,21 +85,26 @@ Algorithm 3. A recursive UCT procedure  <br/> <br/>
 
 Both `LAO*` and `UCT` can use each of the 4 heuristics described in part 1, giving 8 possible combinations. To compare the performance of the two algorithms, `h_walldist` was used in all experiments.
 
-The numbers of moves for LAO*/UCT to reach the goal are ploted against the amount of search time in figure 5 & 6.
+A sample run of LAO* is shown in figure 5.
+
+<img src="part2/fig_8.png" alt="LAO* with h_walldist" width="500"/> 
+Figure 6. A run of LAO* using h_walldist as the heuristic <br/> <br/>
+
+The numbers of moves for LAO*/UCT to reach the goal are ploted against the amount of search time in figure 6 & 7.
 
 <img src="part2/fig_1.png" alt="numbers of moves for LAO* as a function of problem size" width="500"/> 
-Figure 5. Number of moves for LAO* to reach the goal as a function of problem size
+Figure 6. Number of moves for LAO* to reach the goal as a function of problem size
 
 <img src="part1/fig_2.png" alt="numbers of moves for UCT as a function of problem size" width="500"/> 
-Figure 6. Number of moves for UCT to reach the goal as a function of problem size
+Figure 7. Number of moves for UCT to reach the goal as a function of problem size
 
-The probabilities of car accidents versus amount of search time are shown in figure 7 & 8.
+The probabilities of car accidents versus amount of search time are shown in figure 8 & 9.
 
 <img src="part2/fig_3.png" alt="number of nodes GBFS generated vs problem size" width="500"/> 
-Figure 7. Number of nodes that LAO* generated as a function of problem size
+Figure 8. Number of nodes that LAO* generated as a function of problem size
 
 <img src="part2/fig_4.png" alt="# nodes GBFS generated vs problem size" width="500"/> 
-Figure 8. Number of nodes that UCT generated as a function of problem size
+Figure 9. Number of nodes that UCT generated as a function of problem size
 
 ### Author
 [Fan Yang](mailto:fyang3@cs.umd.edu)
