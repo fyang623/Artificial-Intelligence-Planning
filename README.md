@@ -1,13 +1,13 @@
-# Artificial-Intelligence-Planning
-CMSC722 at UMCP Spring 2018
-      
-This repo contains two projects that were requirements for the graduate level "AI Planning" course offered at University of Maryland College Park, spring 2018. Both projects were implemented in Python 3.
+# Planning Racetrack with Unreliable Steering
+A semester-long project for CMSC722 Artificial Intelligence Planning at UMCP, Spring 2018. 
+
+The project contains two parts,
 
 * [`Part 1`](part1):  Comparing the **F**ast **F**orward (FF) heuristic with a domain-specific heuristic on racetrack.
 * [`Part 2`](part2):  Planning and Acting on racetrack with unreliable steering.
 
 ## Introduction
-The project deals with 2D racetrack problems, for which there are three possible state-variable representations. See the detailed explanation below.
+The project tackles with 2D racetrack planning. There are three possible state-variable representations for 2D racetrack problems. See details below.
 
 ### 1. Problem domain
 - 2-D polygonal region
