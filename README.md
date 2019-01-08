@@ -68,7 +68,7 @@ Figure 4. The total number of nodes GBFS generated as function of problem size <
 
 Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time, while h_walldist and h_esdist are much faster. Figure 4 shows that h_ff1 and h_ff2 lead GBFS to generate about the same number of nodes, fewer than h_esdist but more than h_walldist.
 
-## Part 2:
+## Part 2: Planning and Acting with Unreliable Steering
 In this part two stochastic shortest-path (SSP) algorithms were implemented to deal with the nondeterminism of the steering result. For the comparison to be interesting, I selected `LAO*` and `UCT` (see algorithms 2 & 3). `LAO*` is a combination of best-first search and dynamic programming; it generalizes `A*` and handles cyclic search spaces. Meanwhile, `UCT` is an example of online probabilistic planning technique; it is Monte Carlo Tree Search with a sampling strategy that allows to further explore promising actions and prune out rapidly inferior options.
 
 <img src="part2/fig_5.png" alt="LAO* algorithm" width="550"/> 
@@ -88,7 +88,7 @@ Both `LAO*` and `UCT` can use each of the 4 heuristics described in part 1, givi
 A sample run of LAO* is shown in figure 5.
 
 <img src="part2/fig_8.png" alt="LAO* with h_walldist" width="500"/> 
-Figure 6. A run of LAO* using h_walldist as the heuristic <br/> <br/>
+Figure 5. A run of LAO* using h_walldist as the heuristic <br/> <br/>
 
 The numbers of moves for LAO*/UCT to reach the goal are ploted against the amount of search time in figure 6 & 7.
 
