@@ -71,17 +71,17 @@ Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time,
 ## Part 2:
 In this part two stochastic shortest-path (SSP) algorithms were implemented to deal with the nondeterminism of the steering result. For the comparison to be interesting, I selected `LAO*` and `UCT` (see algorithms 2 & 3). `LAO*` is a combination of best-first search and dynamic programming; it generalizes `A*` and handles cyclic search spaces. Meanwhile, `UCT` is an example of online probabilistic planning technique; it is Monte Carlo Tree Search with a sampling strategy that allows to further explore promising actions and prune out rapidly inferior options.
 
-<img src="part2/fig_5.png" alt="LAO* algorithm" width="500"/> 
-Algorithm 2. LAO*, best-first search algorithm for cyclic domains
+<img src="part2/fig_5.png" alt="LAO* algorithm" width="550"/> 
+Algorithm 2. LAO*, best-first search algorithm for cyclic domains  <br/> <br/>
 
 The LAO-Update procedure in algorithm 2 performs a VI-like series of repeated updates that are limited to the states on which the expansion of s may have an effect.
 
-<img src="part2/fig_6.png" alt="LAO-Update" width="500"/> 
+<img src="part2/fig_6.png" alt="LAO-Update" width="350"/> 
   
 Below is the UCT algorithm.
 
-<img src="part2/fig_7.png" alt="UCT algorithm" width="500"/> 
-Algorithm 3. A recursive UCT procedure
+<img src="part2/fig_7.png" alt="UCT algorithm" width="550"/> 
+Algorithm 3. A recursive UCT procedure  <br/> <br/>
 
 Both `LAO*` and `UCT` can use each of the 4 heuristics described in part 1, giving 8 possible combinations. To compare the performance of the two algorithms, `h_walldist` was used in all experiments.
 
