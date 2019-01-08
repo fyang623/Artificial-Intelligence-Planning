@@ -44,12 +44,12 @@ In each representation, the locations of the walls are rigid properties.
 “state variable representation 2. 
 
 <img src="part1/fig_4.png" alt="HFF algorithm" width="500"/> 
-Figure 1. HFF, an algorithm to compute the Fast-Forward heuristic
+Figure 1. HFF, an algorithm to compute the Fast-Forward heuristic  <br/>
 
 A run of GBFS (Greedy Best-First Seearch) with `h_ff2` is shown in figure 2.
 
 <img src="part1/fig_0.png" alt="GBFS with h_ff2" width="500"/> 
-Figure 2. A run of GBFS using `h_ff2` 
+Figure 2. A run of GBFS using `h_ff2` <br/>
 
 Dr. Nau provided two other heuritics in addition to `h_ff1` and `h_ff2`. Below is a one-sentence description for each of the 4 heuristics,
 
