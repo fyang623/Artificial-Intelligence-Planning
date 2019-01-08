@@ -44,12 +44,12 @@ In each representation, the locations of the walls are rigid properties.
 “state variable representation 2. 
 
 <img src="part1/fig_4.png" alt="HFF algorithm" width="500"/> 
-Figure 1. HFF, an algorithm to compute the Fast-Forward heuristic  <br/>
+Figure 1. HFF, an algorithm to compute the Fast-Forward heuristic <br/> <br/>
 
 A run of GBFS (Greedy Best-First Seearch) with `h_ff2` is shown in figure 2.
 
 <img src="part1/fig_0.png" alt="GBFS with h_ff2" width="500"/> 
-Figure 2. A run of GBFS using `h_ff2` <br/>
+Figure 2. A run of GBFS using `h_ff2` <br/> <br/>
 
 Dr. Nau provided two other heuritics in addition to `h_ff1` and `h_ff2`. Below is a one-sentence description for each of the 4 heuristics,
 
@@ -61,10 +61,10 @@ Dr. Nau provided two other heuritics in addition to `h_ff1` and `h_ff2`. Below i
 The performance of the 4 heuristics was evaluated under 2 metrics, one is the total CPU time for GBFS (Greedy Best-First Seearch) as a function of problem size, the other is the total number of nodes that GBFS generated as a function of problem size. See figure 3 & 4.
 
 <img src="part1/fig_1.png" alt="CPU time vs problem size" width="500"/> 
-Figure 3. The total CPU time for GBFS as a function of problem size
+Figure 3. The total CPU time for GBFS as a function of problem size <br/> <br/>
 
 <img src="part1/fig_2.png" alt="number of nodes GBFS generated vs problem size" width="500"/> 
-Figure 4. The total number of nodes GBFS generated as function of problem size
+Figure 4. The total number of nodes GBFS generated as function of problem size <br/> <br/>
 
 Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time, while h_walldist and h_esdist are much faster. Figure 4 shows that h_ff1 and h_ff2 lead GBFS to generate about the same number of nodes, fewer than h_esdist but more than h_walldist.
 
