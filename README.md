@@ -22,6 +22,9 @@ The project tackles with 2D racetrack planning. There are three possible state-v
   
 See figure 1 for an example of the problem domain.
 
+<img src="fig.png" alt="fig.png" width="500"/> 
+Figure 1. An example of 2D racetrack problem.
+
 ### 2. State-variable representations
 - `Representation 1`: state variables x, y for location, and u, v for velocity
   - Each state variable’s value is an integer
@@ -40,7 +43,13 @@ In each representation, the locations of the walls are rigid properties.
 `ff2` and `h_ff2` were implemented similarly as `ff1` and `h_ff1`, with the phrase “state variable representation 1” replaced by
 “state variable representation 2. 
 
-A run of GBFS (Greedy Best-First Seearch) with `h_ff1` is shown in figure 2.
+<img src="part1/fig_4.png" alt="HFF algorithm" width="500"/> 
+Figure 1. HFF, an algorithm to compute the Fast-Forward heuristic
+
+A run of GBFS (Greedy Best-First Seearch) with `h_ff2` is shown in figure 2.
+
+<img src="part1/fig_0.png" alt="GBFS with h_ff2" width="500"/> 
+Figure 2. A run of GBFS using `h_ff2` 
 
 Dr. Nau provided two other heuritics in addition to `h_ff1` and `h_ff2`. Below is a one-sentence description for each of the 4 heuristics,
 
@@ -51,8 +60,10 @@ Dr. Nau provided two other heuritics in addition to `h_ff1` and `h_ff2`. Below i
 
 The performance of the 4 heuristics was evaluated under 2 metrics, one is the total CPU time for GBFS (Greedy Best-First Seearch) as a function of problem size, the other is the total number of nodes that GBFS generated as a function of problem size. See figure 3 & 4.
 
+<img src="part1/fig_1.png" alt="CPU time vs problem size" width="500"/> 
 Figure 3. The total CPU time for GBFS as a function of problem size
 
+<img src="part1/fig_2.png" alt="number of nodes GBFS generated vs problem size" width="500"/> 
 Figure 4. The total number of nodes GBFS generated as function of problem size
 
 Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time, while h_walldist and h_esdist are much faster. Figure 4 shows that h_ff1 and h_ff2 lead GBFS to generate about the same number of nodes, fewer than h_esdist but more than h_walldist.
@@ -60,12 +71,35 @@ Figure 3 shows that h_ff1 and h_ff2 consume roughly the same amount of CPU time,
 ## Part 2:
 In this part two stochastic shortest-path (SSP) algorithms were implemented to deal with the nondeterminism of the steering result. For the comparison to be interesting, I selected `LAO*` and `UCT` (see algorithms 2 & 3). `LAO*` is a combination of best-first search and dynamic programming; it generalizes `A*` and handles cyclic search spaces. Meanwhile, `UCT` is an example of online probabilistic planning technique; it is Monte Carlo Tree Search with a sampling strategy that allows to further explore promising actions and prune out rapidly inferior options.
 
+<img src="part2/fig_5.png" alt="LAO* algorithm" width="500"/> 
+Algorithm 2. LAO*, best-first search algorithm for cyclic domains
+
+The LAO-Update procedure in algorithm 2 performs a VI-like series of repeated updates that are limited to the states on which the expansion of s may have an effect.
+
+<img src="part2/fig_6.png" alt="LAO-Update" width="500"/> 
+  
+Below is the UCT algorithm.
+
+<img src="part2/fig_7.png" alt="UCT algorithm" width="500"/> 
+Algorithm 3. A recursive UCT procedure
+
 Both `LAO*` and `UCT` can use each of the 4 heuristics described in part 1, giving 8 possible combinations. To compare the performance of the two algorithms, `h_walldist` was used in all experiments.
 
-The numbers of moves that LAO*/UCT takes to reach the goal are ploted against the amount of search time in figure 5 & 6.
+The numbers of moves for LAO*/UCT to reach the goal are ploted against the amount of search time in figure 5 & 6.
+
+<img src="part2/fig_1.png" alt="numbers of moves for LAO* as a function of problem size" width="500"/> 
+Figure 5. Number of moves for LAO* to reach the goal as a function of problem size
+
+<img src="part1/fig_2.png" alt="numbers of moves for UCT as a function of problem size" width="500"/> 
+Figure 6. Number of moves for UCT to reach the goal as a function of problem size
 
 The probabilities of car accidents versus amount of search time are shown in figure 7 & 8.
 
+<img src="part2/fig_3.png" alt="number of nodes GBFS generated vs problem size" width="500"/> 
+Figure 7. Number of nodes that LAO* generated as a function of problem size
+
+<img src="part2/fig_4.png" alt="# nodes GBFS generated vs problem size" width="500"/> 
+Figure 8. Number of nodes that UCT generated as a function of problem size
 
 ### Author
 [Fan Yang](mailto:fyang3@cs.umd.edu)
