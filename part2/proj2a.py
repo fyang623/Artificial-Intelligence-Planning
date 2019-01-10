@@ -81,7 +81,7 @@ def main(s, f, w, time_limit=5):
             # need to add it to "expanded".
             #
             # applicable(state) returns a map that maps each of the applicable actions
-            # to the possible states that may be resulted from taking that action. Therefore,
+            # to the possible states that may result from taking that action. Therefore,
             # "expanded" is actually a map of maps.
             #
             # Below is a sketch for a key:value pair in "expanded"
