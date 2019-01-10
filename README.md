@@ -104,7 +104,7 @@ The probabilities of car accidents versus amount of search time are shown in fig
 Figure 8. Number of nodes that LAO* generated as a function of problem size
 
 <img src="part2/fig_4.png" alt="# nodes GBFS generated vs problem size" width="500"/> 
-Figure 9. Number of nodes that UCT generated as a function of problem size
+Figure 9. Number of nodes that UCT generated as a function of the amount of search time
 
 ### Author
 [Fan Yang](mailto:fyang3@cs.umd.edu)
