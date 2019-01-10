@@ -3,7 +3,7 @@ A semester-long project for CMSC722 Artificial Intelligence Planning at UMCP, Sp
 
 The project contains two parts,
 
-* [`Part 1`](part1):  Comparing the **F**ast **F**orward (FF) heuristic with a domain-specific heuristic on racetrack.
+* [`Part 1`](part1):  Comparing the **F**ast-**F**orward (FF) heuristic with a domain-specific heuristic on racetrack.
 * [`Part 2`](part2):  Planning and Acting on racetrack with unreliable steering.
 
 ## Introduction
@@ -96,7 +96,7 @@ The numbers of moves for LAO*/UCT to reach the goal are ploted against the amoun
 Figure 6. Number of moves for LAO* to reach the goal as a function of problem size
 
 <img src="part1/fig_2.png" alt="numbers of moves for UCT as a function of problem size" width="500"/> 
-Figure 7. Number of moves for UCT to reach the goal as a function of problem size
+Figure 7. Number of moves for UCT to reach the goal as a function of problem size <br> <br>
 
 The probabilities of car accidents versus amount of search time are shown in figure 8 & 9.
 
